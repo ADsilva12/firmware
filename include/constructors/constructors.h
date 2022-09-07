@@ -138,6 +138,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     IMU<BNO0809DOF::Plugin> imu;
 #endif
 
+#ifdef USE_MPU60506DOF_IMU
+    #include <imu/mpu6050_plugin.h>
+
+    IMU<MPU60506DOF::Plugin> imu;
+#endif
+
 champ::GaitConfig gait_config(
     KNEE_ORIENTATION,
     PANTOGRAPH_LEG,
